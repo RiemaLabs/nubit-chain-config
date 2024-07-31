@@ -1,0 +1,4 @@
+/dns4/seed.nubit-alphatestnet-1.com/tcp/12121/p2p/12D3KooWGaGKTtZVPM3FkY5nENsZUc2noK8m7iE7P8tyoYGUzTAP
+/dns4/seed.nubit-alphatestnet-1.com/tcp/22121/p2p/12D3KooWMURBHu6fnamXG5PdRJ2gK7qMGeFUJoZU3sVYzwknRk7G
+/dns4/seed.nubit-alphatestnet-1.com/tcp/32121/p2p/12D3KooWMooixvkxAMvYEF5GYtHXwRJbdnB8hY9rMdPyBxb3Y3ma
+/dns4/seed.nubit-alphatestnet-1.com/tcp/42121/p2p/12D3KooWLg5vMKrmVtHY6ykeekJWy8ZqAH2h856e19WhPetmxodR
