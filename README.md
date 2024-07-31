@@ -4,10 +4,10 @@
 
 This repository holds the configuration files necessary for setting up Nubit networks.
 
-For detailed instructions on running your own Nubit node, please visit the [Nubit Documentation](https://docs.nubit.org). The `genesis.json` file is essential for nubit validators and should be placed in the $HOME/.nubit-validator/config/genesis.json directory.
+For detailed instructions on running your own Nubit node, please visit the [Nubit Documentation](https://docs.nubit.org). The `genesis.json` file is essential for nubit validators and should be placed in the $HOME/.nubit-validator/config directory.
 
 ## Networks
 
-| Name           | Type     | Chain ID               | Configs                                   |
-| -------------- | -------- | ---------------------- | ----------------------------------------- |
-| Nubit Testnet  | Testnet  | nubit-alphatestnet-1   | [nubit-alphatestnet-1](nubit-alphatestnet-1) |
+| Name              | Type     | Chain ID               | Configs                                   |
+| ----------------- | -------- | ---------------------- | ----------------------------------------- |
+| Nubit Alpha Testnet | Testnet  | nubit-alphatestnet-1   | [nubit-alphatestnet-1](nubit-alphatestnet-1) |
