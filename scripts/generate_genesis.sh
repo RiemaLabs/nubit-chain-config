@@ -30,8 +30,6 @@ while read -r line; do
     nubit-validatord --home=$new_dir add-genesis-account $node_addr $COIN --keyring-backend test 
 done <$file
 
-# celestia-appd start --rpc.laddr tcp://0.0.0.0:26657
-
 # Copy the new node's config to the original node
 # cp $new_dir/config/gentx/gentx-*.json $dest_dir/config/gentx/
 
