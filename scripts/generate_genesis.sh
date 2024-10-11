@@ -3,7 +3,9 @@
 chain_id=$1
 new_dir=$3
 moniker_name=validator
-# COIN="10000000000000unub"
+staker_name=staker
+staker_balance=1000000000000000000unub
+staker_amount=10000000000unub
 file=$2
 
 # If the directory isn't here then create it
@@ -16,11 +18,12 @@ if [ ! -d "$chain_id/genesis" ]; then
 fi
 
 
-# Create the new node
+# init the new node
 nubit-validatord --home=$new_dir init $moniker_name --chain-id $chain_id
 
-# nubit-validatord --home=$new_dir keys add $new_node_name --keyring-backend=test
-# node_addr=$(nubit-validatord --home=$new_dir keys show $new_node_name -a --keyring-backend test)
+# Add the staker account
+nubit-validatord --home=$new_dir keys add $staker_name --keyring-backend=test
+nubit-validatord --home=$new_dir add-genesis-account $staker_name $staker_balance --keyring-backend test 
 
 ## Add the genesis accounts
 while read -r line; do
@@ -29,6 +32,9 @@ while read -r line; do
     COIN=$(echo "$line" | cut -d ',' -f 2)
     nubit-validatord --home=$new_dir add-genesis-account $node_addr $COIN --keyring-backend test 
 done <$file
+
+# stake tx
+nubit-validatord --home=$new_dir gentx $staker_name $staker_amount --chain-id $chain_id --keyring-backend test
 
 # Copy the new node's config to the original node
 # cp $new_dir/config/gentx/gentx-*.json $dest_dir/config/gentx/
